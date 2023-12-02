@@ -2,6 +2,7 @@ from DL_Models import Ensemble
 from StandardML_Models.StandardRegressor_1D import StandardRegressor_1D
 from StandardML_Models.StandardRegressor_2D import StandardRegressor_2D
 from StandardML_Models.StandardClassifier_1D import StandardClassifier_1D
+from StandardML_Models.KNNEEG import KNNEEG
 from DL_Models.Ensemble import Ensemble
 from config import config
 
@@ -33,25 +34,13 @@ our_ML_models = {
             'max' : {
                 'KNN' : [StandardClassifier_1D, {'model_name':'KNN', 'leaf_size': 10, 'n_neighbors': 100, 'n_jobs' : -1}],
                 'GaussianNB' : [StandardClassifier_1D, {'model_name':'GaussianNB', 'var_smoothing': 0.0011513953993264468}],
-                'LinearSVC' : [StandardClassifier_1D, {'model_name':'LinearSVC', 'C': 0.01, 'tol' : 1e-5, 'max_iter' : 1200}],
-                'RBF SVC' : [StandardClassifier_1D, {'model_name':'RBF SVC', 'C': 0.1, 'gamma': 1, 'tol' : 1e-5, 'max_iter' : 1200}],
-                'DecisionTree' : [StandardClassifier_1D, {'model_name':'DecisionTree', 'max_depth': 7}],
-                'RandomForest' : [StandardClassifier_1D, {'model_name':'RandomForest', 'max_depth': 10, 'n_estimators': 100, 'n_jobs' : -1}],
-                'GradientBoost' : [StandardClassifier_1D, {'model_name':'GradientBoost', 'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 50}],
-                'AdaBoost' : [StandardClassifier_1D, {'model_name':'AdaBoost', 'learning_rate': 0.5, 'n_estimators': 250}],
-                'XGBoost' : [StandardClassifier_1D, {'model_name':'XGBoost', 'objective' : 'binary:logistic', 'eval_metric' : 'logloss', 'eta': 0.1, 'max_depth': 15, 'n_estimators': 250, 'use_label_encoder' : False}]
+                
             },
 
             'min' : {
                 'KNN' : [StandardClassifier_1D, {'model_name':'KNN', 'leaf_size': 10, 'n_neighbors': 10, 'n_jobs' : -1}],
                 'GaussianNB' : [StandardClassifier_1D, {'model_name':'GaussianNB', 'var_smoothing': 0.0004941713361323833}],
-                'LinearSVC' : [StandardClassifier_1D, {'model_name':'LinearSVC', 'C': 0.01, 'tol' : 1e-5, 'max_iter' : 1200}],
-                'RBF SVC' : [StandardClassifier_1D, {'model_name':'RBF SVC', 'C': 1, 'gamma': 0.01, 'tol' : 1e-5, 'max_iter' : 1200}],
-                'DecisionTree' : [StandardClassifier_1D, {'model_name':'DecisionTree', 'max_depth': 5}],
-                'RandomForest' : [StandardClassifier_1D, {'model_name':'RandomForest', 'max_depth': 10, 'n_estimators': 250, 'n_jobs' : -1}],
-                'GradientBoost' : [StandardClassifier_1D, {'model_name':'GradientBoost', 'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50}],
-                'AdaBoost' : [StandardClassifier_1D, {'model_name':'AdaBoost', 'learning_rate': 0.5, 'n_estimators': 100}],
-                'XGBoost' : [StandardClassifier_1D, {'model_name':'XGBoost', 'objective' : 'binary:logistic', 'eval_metric' : 'logloss', 'eta': 0.1, 'max_depth': 5, 'n_estimators': 250, 'use_label_encoder' : False}]
+                "KNNEEG": [KNNEEG,{'model_name':'KNNEEG'}]
             }
         }
     },

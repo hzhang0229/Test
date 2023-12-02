@@ -19,7 +19,7 @@ config['feature_extraction'] = True # must be set to True for ML_models operatin
 config['include_ML_models'] = True 
 config['include_DL_models'] = False     
 config['include_your_models'] = False 
-config['include_dummy_models'] = True 
+config['include_dummy_models'] = False
 
 ##################################################################
 ##################################################################

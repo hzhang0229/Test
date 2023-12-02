@@ -7,6 +7,9 @@ class StandardClassifier_1D:
         if self.model_name == 'KNN':
             from sklearn.neighbors import KNeighborsClassifier
             self.model = KNeighborsClassifier(**model_params)
+        elif self.model_name == "KNNEEG":
+            from KNN import returnmodel
+            self.model = returnmodel()
         elif self.model_name == 'GaussianNB':
             from sklearn.naive_bayes import GaussianNB
             self.model = GaussianNB(**model_params)
