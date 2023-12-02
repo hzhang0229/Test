@@ -13,11 +13,11 @@ class KNNEEG:
     def fit(self, trainX, trainY, validX, validY):
         trainX = trainX.reshape((-1, 258))  # TODO: A hack for now
         print("Using KNNEEG")
-        self.model.train(trainX, trainY.ravel())
+        self.model.train()
 
     def predict(self, testX):
         testX = testX.reshape((-1, 258))  # TODO: A hack for now
-        return self.model.eval(testX)
+        return self.model.eval()
 
     def save(self, path):
         # save the model to disk
