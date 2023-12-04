@@ -17,6 +17,7 @@ class KNNEEG:
 
     def predict(self, testX):
         testX = testX.reshape((-1, 258))  # TODO: A hack for now
+        print("Evaluating")
         return self.model.eval()
 
     def save(self, path):

@@ -39,7 +39,6 @@ our_ML_models = {
 
             'min' : {
                 'KNN' : [StandardClassifier_1D, {'model_name':'KNN', 'leaf_size': 10, 'n_neighbors': 10, 'n_jobs' : -1}],
-                'GaussianNB' : [StandardClassifier_1D, {'model_name':'GaussianNB', 'var_smoothing': 0.0004941713361323833}],
                 "KNNEEG": [KNNEEG,{'model_name':'KNNEEG'}]
             }
         }
